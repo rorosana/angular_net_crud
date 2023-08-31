@@ -51,4 +51,9 @@ export class TarjetaCreditoComponent implements OnInit {
     this.toastr.success('La tarjeta fue registrada con éxito!', 'Tarjeta registrada');
     this.form.reset();
   }
+
+  eliminarTarjeta(index: number){
+    this.listTarjetas.splice(index, 1);
+    this.toastr.error('La tarjeta ha sido eliminada con éxito!', 'Tarjeta eliminada');
+  }
 }
